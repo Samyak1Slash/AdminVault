@@ -2,14 +2,16 @@
 const express=require("express");
 const router=express.Router();
 const authcontroller=require("../controllers/auth-contoller");
+const {signupSchema,loginSchema}=require("../validators/auth-validator");
+const validate=require("../Middlewares/validate-middleware");
 
 
 router.route("/").get(authcontroller.home);
 
 
-router.route("/register").post(authcontroller.register); 
+router.route("/register").post(validate(signupSchema),authcontroller.register); 
 
-router.route("/login").post(authcontroller.login);
+router.route("/login").post(validate(loginSchema),authcontroller.login);
 
 
 module.exports = router;

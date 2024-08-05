@@ -58,8 +58,9 @@ const login=async(req,res)=>{
             res.status(401).json({msg:"Invalid credentials"});
         }
 
-    } catch (error) {
-        res.status(500).json("Internal server error");
+    } 
+    catch (error) {
+        next(error);
     }
 }
 
