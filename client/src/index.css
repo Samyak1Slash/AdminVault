@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --btn-color: #646cff;
+  --dark-color: #242424;
+  --helper-color: #99b9ff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*? base style */
+
+body {
+  margin: 0;
+  /* display: flex;
+  place-items: center; */
+  /* min-width: 32rem; */
+  min-height: 100vh;
+}
+
+ /*?  Help me reach 1 Million subs 👉 https://youtube.com/thapatechnical */
+
+h1 {
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--btn-color);
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/*? layout Rule  */
+
+.container {
+  max-width: 140rem;
+  padding: 4rem 2.4rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*? Module Rules / Reusable */
+button {
+  text-transform: capitalize;
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: var(--btn-color);
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+  margin-left: 3.2rem;
+}
+
+/***** Hero Section *****/
+
+.section-hero {
+  & .grid {
+    align-items: center;
+  }
+
+  .hero-content {
+    & p {
+      margin: 2.4rem 0 4.8rem 0;
+      &:first-child {
+        margin: 0 0 1.2rem 0;
+      }
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    & img {
+      width: 70%;
+      height: auto;
+    }
+  }
+}
+
+/***** End Hero  *****/
+
+/***** analytics Section *****/
+
+.section-analytics {
+  margin: 9.6rem 0;
+
+  & .container {
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    padding: 2rem; /* Added padding to give some space inside the container */
+  }
+
+  & .grid {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    color: var(--dark-color);
+    text-align: center; /* Center the text inside each grid item */
+
+    & .div1 {
+      flex: 1; /* Make sure each item takes equal space */
+      padding: 1rem; /* Add some padding to space out the content */
+      border-right: 0.2rem solid var(--dark-color);
+
+      &:last-child {
+        border: none; /* Remove the right border from the last item */
+      }
+
+      & h2 {
+        font-size: 4.8rem;
+        margin-bottom: 0.5rem; /* Add margin to space out the heading and paragraph */
+      }
+
+      & p {
+        text-transform: capitalize;
+        margin-top: 0; /* Remove top margin */
+      }
+    }
+  }
+}
+/**** End of Analytics Section *****/ 
+
+
+/**** About Section********/
+/* Container for the entire section */
+.section-why-choose-us {
+  padding: 4rem 0;
+  background-color: #121212; /* Dark background */
+  color: #f5f5f5; /* Light text color */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Grid layout for the section */
+.section-why-choose-us .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* Space between elements */
+}
+
+/* Content styling */
+.section-why-choose-us .content {
+  max-width: 50%;
+}
+
+.section-why-choose-us h1 {
+  font-size: 3.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-why-choose-us p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* Button group styling */
+.section-why-choose-us .btn-group {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 2rem;
+}
+
+.section-why-choose-us .btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border: 2px solid #0066ff; /* Border color */
+  color: #0066ff; /* Text color */
+  background: transparent;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-why-choose-us .btn:hover {
+  background-color: #0066ff;
+  color: #ffffff;
+}
+
+/* Styling for the image */
+.section-why-choose-us .image {
+  max-width: 45%; /* Image takes up less space */
+  text-align: right;
+}
+
+.section-why-choose-us img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .section-why-choose-us .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-why-choose-us .content,
+  .section-why-choose-us .image {
+    max-width: 100%;
+  }
+
+  .section-why-choose-us .image {
+    margin-top: 2rem;
+  }
+}
