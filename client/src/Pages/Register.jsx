@@ -50,7 +50,7 @@ export const Register=()=>{
 
                                         <div>
                                             <label htmlFor="phone">Phone</label>
-                                            <input type="number" name="phone" value={user.phone} placeholder="Enter phone" id="phone" onChange={handleInput} required autoComplete="off"/> 
+                                            <input type="tel" name="phone" value={user.phone} placeholder="Enter phone" id="phone" onChange={handleInput} required autoComplete="off"/> 
                                         </div>
                                         <div>
                                             <label htmlFor="password">Password</label>

@@ -6,6 +6,8 @@ import { Service } from "./Pages/Service";
 import { Login } from "./Pages/Login";
 import { Register } from "./Pages/Register";
 import { Navbar } from "./component/Navbar";
+import { Error } from "./Pages/Error";
+import { Footer } from "./component/Footer/Footer";
 
 
 const App=()=>{
@@ -37,8 +39,13 @@ const App=()=>{
         <Route    
           path="/login"
           element={<Login/>}
-        />      
+        />
+        <Route    
+          path="*"
+          element={<Error/>}
+        />       
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </>
     

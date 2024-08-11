@@ -263,3 +263,467 @@ button {
     margin-top: 2rem;
   }
 }
+
+/* Registration Form Styles */
+
+.section-registration {
+  background-color: #121212; /* Black background */
+  padding: 4rem 0;
+}
+
+.registration-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem; /* Rounded corners for the image */
+}
+
+.registration-form {
+  background-color: #1e1e1e; /* Dark background for the form container */
+  padding: 2rem;
+  border-radius: 1rem; /* Rounded corners for the form container */
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); /* Subtle shadow for better visual separation */
+  color: #fff; /* White text color for the form */
+}
+
+.registration-form h1 {
+  font-size: 3.6rem;
+  color: #fff; /* White heading text */
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.registration-form div {
+  margin-bottom: 1.6rem; /* Space between form fields */
+}
+
+.registration-form label {
+  display: block;
+  font-size: 1.8rem;
+  color: #fff; /* White label text */
+  margin-bottom: 0.5rem; /* Space between label and input */
+}
+
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form input[type="text"],
+.registration-form input[type="tel"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #444; /* Dark border */
+  border-radius: 0.8rem;
+  background-color: #2c2c2c; /* Dark background for input fields */
+  color: #fff; /* White text in input fields */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.registration-form input[type="email"]:focus,
+.registration-form input[type="password"]:focus,
+.registration-form input[type="text"]:focus,
+.registration-form input[type="tel"]:focus {
+  border-color: var(--btn-color);
+  outline: none; /* Remove default outline on focus */
+}
+
+.registration-form button {
+  background-color: var(--btn-color);
+  color: #fff; /* White text for the button */
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.7rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: #5555ff; /* Darker shade on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
+  .registration-form {
+    padding: 2rem; /* Adjust padding for small screens */
+  }
+}
+
+/* Contact Form Styles */
+
+.section-contact {
+  background-color: #121212; /* Black background */
+  padding: 4rem 0;
+}
+
+.contact-content h1 {
+  font-size: 3.6rem;
+  color: #fff; /* White text for the heading */
+  text-align: center;
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.contact-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem; /* Rounded corners for the image */
+}
+
+.section-form {
+  background-color: #1e1e1e; /* Dark background for the form container */
+  padding: 2rem;
+  border-radius: 1rem; /* Rounded corners for the form container */
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); /* Subtle shadow for better visual separation */
+  color: #fff; /* White text color for the form */
+}
+
+.section-form h1 {
+  font-size: 3.6rem;
+  color: #fff; /* White heading text */
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.section-form div {
+  margin-bottom: 1.6rem; /* Space between form fields */
+}
+
+.section-form label {
+  display: block;
+  font-size: 1.8rem;
+  color: #fff; /* White label text */
+  margin-bottom: 0.5rem; /* Space between label and input */
+}
+
+.section-form input[type="text"],
+.section-form input[type="email"],
+.section-form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #444; /* Dark border */
+  border-radius: 0.8rem;
+  background-color: #2c2c2c; /* Dark background for input fields */
+  color: #fff; /* White text in input fields */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.section-form input[type="text"]:focus,
+.section-form input[type="email"]:focus,
+.section-form textarea:focus {
+  border-color: var(--btn-color);
+  outline: none; /* Remove default outline on focus */
+}
+
+.section-form button {
+  background-color: var(--btn-color);
+  color: #fff; /* White text for the button */
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.7rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section-form button:hover {
+  background-color: #5555ff; /* Darker shade on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .grid-two-cols {  
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
+  .section-form {
+    padding: 2rem; /* Adjust padding for small screens */
+  }
+}
+
+
+/* For Error Page*/
+/*? state rules  */
+
+button:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+  /* border: 0.2rem solid #fff; */
+}
+
+a:hover,
+a.active {
+  color: #535bf2;
+}
+
+/* pseduo elements  */
+.main-heading {
+  position: relative;
+  text-transform: capitalize;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 0.5rem;
+    background-color: var(--btn-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover,
+  a.active {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* error page  */
+#error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh; /* Ensure it takes up the full viewport height */
+  margin: 0; /* Remove default margin */
+  background-color: #000; /* Optional: Set background color to match your preference */
+}
+
+#error-page .content {
+  max-width: 70rem;
+  text-align: center;
+  padding: 20px; /* Optional: Add padding to content */
+  background: rgba(255, 255, 255, 0.1); /* Optional: Add a slight background for better readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.content h2.header {
+  font-size: 18vw;
+  line-height: 1em;
+  animation: animate 10s ease-in-out infinite;
+  background: -webkit-repeating-linear-gradient(
+    -60deg,
+    #71b7e6,
+    var(--btn-color),
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    var(--btn-color),
+    #9b59b6
+  );
+  background-size: 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+  position: relative;
+  -webkit-animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.content h4 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.content .btns {
+  margin: 25px 0;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.content .btns a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  border: 2px solid var(--btn-color);
+  color: var(--btn-color);
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.content .btns a:hover {
+  background: var(--btn-color);
+  color: #fff;
+}
+
+/** -----------------------
+** registration section css
+** -------------------------  */
+
+.section-registration {
+  padding: 0 3.2rem;
+
+  & .container {
+    /* background-color: #fff; */
+    padding-top: 3.2rem;
+    align-items: center;
+
+    & img {
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  & .registration-form {
+    & label {
+      display: block;
+      margin: 2.4rem 0 0.8rem 0;
+      text-transform: capitalize;
+    }
+    & input {
+      width: 80%;
+      padding: 0.6rem 0.6rem;
+    }
+
+    & button {
+      margin-top: 3.2rem;
+    }
+  }
+}
+
+.adminNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.adminContainer {
+  display: grid;
+  padding-top: 0;
+  grid-template-columns: 1fr 3fr;
+}
+
+.adminList {
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.adminList li {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+/** -----------------------
+** services section css
+** -------------------------  */
+
+.section-services {
+  & .container:first-child {
+    padding: 0;
+  }
+  & .grid-three-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem;
+  }
+
+  & .card {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    border: 0.2rem solid var(--helper-color);
+
+    & .card-img {
+      text-align: center;
+      & img {
+        width: 70%;
+        height: auto;
+        filter: drop-shadow(0 0 2rem 2rem #fff);
+        -webkit-filter: drop-shadow(0 0 2rem 2rem #fff);
+      }
+    }
+
+    & .card-details {
+      padding: 2.4rem;
+
+      & .grid p {
+        font-size: 1.4rem;
+      }
+
+      & h2 {
+        font-size: 3.2rem;
+        margin: 1.2rem 0 2.4rem 0;
+      }
+    }
+  }
+}
+
+/** -----------------------
+** media query section css
+** -------------------------  */
+
+@media (width <= 998px) {
+  .grid-two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-services {
+    & .grid-three-cols {
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    }
+  }
+
+  .section-registration {
+    & .container {
+      & .reg-img img {
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (width <= 798px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .section-registration {
+    & .container {
+      & .reg-img img {
+        width: 50%;
+        height: auto;
+      }
+    }
+
+    & .registration-form {
+      & input {
+        width: 100%;
+        padding: 0.6rem 0.6rem;
+      }
+    }
+  }
+}
+
