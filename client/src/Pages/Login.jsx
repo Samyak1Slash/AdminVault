@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../store/auth";
+
 
 export const Login=()=>{
     const [user,setUser]=useState({
@@ -6,6 +9,9 @@ export const Login=()=>{
         password:""
 
     });
+
+    const navigate=useNavigate();
+    const {storetokenInLS}=useAuth();
     //Handeling the input values
 
     const handleInput =(e)=>{
@@ -17,9 +23,42 @@ export const Login=()=>{
     }
 
     //Handle the submit
-    const handleFormSubmit=(event)=>{
+    const handleFormSubmit=async (event)=>{
         event.preventDefault();
         console.log(user);
+
+        
+
+        try {
+            const response=await fetch(`http://localhost:5454/api/auth/login`,{
+                method:"POST",
+                headers:{
+                    'Content-Type':"application/json"
+                },  
+                body:JSON.stringify(user),
+            })
+
+            console.log(response);
+            if(response.ok){
+                const res_data=await response.json();
+                console.log(res_data);//here we will get msg,token and UserId
+                //Store token in local storage
+
+                storetokenInLS(res_data.token);
+                
+                alert("Login successful");
+                setUser({
+                    email:"",
+                    password:""
+                });
+                navigate("/");
+            }else{
+                alert("Invalid Credentials");
+            }
+        } catch (error) {
+            console.log("Invalid Credentials",error);
+            
+        }
     }
     return(
         <>
@@ -33,7 +72,7 @@ export const Login=()=>{
                             {/* Lets tackle Registartion form */}
 
                             <div className="registration-form">    
-                                    <h1 className="main-heading mb-3">Registration From</h1>
+                                    <h1 className="main-heading mb-3">Login</h1>
                                     <br/>
 
                                         <form onSubmit={handleFormSubmit}>{/**Hume form ke input ka seq same rkahna hai as per our model schema */}
