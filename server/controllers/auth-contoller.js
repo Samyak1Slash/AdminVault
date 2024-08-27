@@ -23,6 +23,7 @@ const register=async(req,res)=>{
         //if email dosent match lt hash the password
         // const saltRound=10;
         // const hash_password=await bcrypt.hash(password, saltRound); //abhi isko idhar se hatake modeles me pre mein dalte
+        //Upar wale k apne pre method mein dal diya 
 
         const userCreated=await User.create({username, email, phone, password});
 
@@ -66,4 +67,20 @@ const login=async(req,res)=>{
 
 
 
-module.exports={home,register,login};
+//*------------
+//to send user data- USER Logic
+//*-------------
+
+const user=async(req,res)=>{
+    try {
+        const userData=req.user;
+        console.log(userData);
+        res.status(200).json({userData});
+        
+    } catch (error) {
+        console.log("error from the user route",error);
+    }
+}
+
+
+module.exports={home,register,login,user};

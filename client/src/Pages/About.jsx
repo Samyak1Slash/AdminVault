@@ -1,9 +1,12 @@
+import { useAuth } from "../store/auth";
 export const About = () => {
+    const { user }=useAuth();
     return (
         <>
             <section className="section-why-choose-us">
                 <div className="container">
                     <div className="content">
+                        <p>Welcome,{user?user.username : "to our Website"}</p>
                         <h1>Why Choose Us?</h1>
                         <p>Expertise: Our team consists of experienced IT professionals who are passionate about staying up-to-date with the latest industry trends.</p>
                         <p>Customization: We understand that every business is unique. That's why we create solutions that are tailored to your specific needs and goals.</p>

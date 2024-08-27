@@ -51,6 +51,7 @@ export const Login=()=>{
                     email:"",
                     password:""
                 });
+                
                 navigate("/");
             }else{
                 alert("Invalid Credentials");

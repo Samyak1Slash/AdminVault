@@ -8,6 +8,7 @@ import { Register } from "./Pages/Register";
 import { Navbar } from "./component/Navbar";
 import { Error } from "./Pages/Error";
 import { Footer } from "./component/Footer/Footer";
+import { Logout } from "./Pages/Logout";
 
 
 const App=()=>{
@@ -39,6 +40,11 @@ const App=()=>{
         <Route    
           path="/login"
           element={<Login/>}
+        />
+        <Route
+            path="/logout"
+            element={<Logout/>}
+
         />
         <Route    
           path="*"
